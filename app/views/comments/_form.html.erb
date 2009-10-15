@@ -1,0 +1,16 @@
+<% form_for([form.post,form]) do |f| %>
+<%= f.error_messages %>
+
+  <div>
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+  </div>
+
+
+
+
+
+  <div>
+    <%= f.submit 'Submit' %>
+  </div>
+<% end %>

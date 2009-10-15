@@ -1,0 +1,6 @@
+<h1>Listing posts</h1>
+
+
+<%= render :partial => 'posts/post', :collection => @posts %>
+
+<%= link_to 'new post', new_post_path(@post) %>

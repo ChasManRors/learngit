@@ -1,0 +1,7 @@
+@app.name = 'learngit'
+route [:posts, :comments]
+add_attrs :posts=>"body:text title:string", :comments=>"body:text"
+route [:posts, :comments]
+Comment.belongs_to(Post)
+Post.has_many(Comment)
+generate 

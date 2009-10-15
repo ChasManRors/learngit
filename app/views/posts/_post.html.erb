@@ -1,0 +1,25 @@
+<% div_for(post) do %>
+<h3>post</h3>
+
+  <div>
+    <b>title:</b>
+    <%=h post.title %>
+  </div>
+
+  <div>
+    <b>body:</b>
+    <%=h post.body %>
+  </div>
+
+<% end %>
+
+  
+  <div>
+    <h4>list of comments</h4>
+    <%= render :partial => 'comments/comment_small', :collection => post.comments %>
+  </div>
+  <div>
+    <h4>make a new comment</h4>
+    <%= render :partial => 'comments/form', :object => post.comments.new %>
+  </div>
+
