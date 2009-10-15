@@ -14,7 +14,8 @@ class PostsController < ApplicationController
   end
   def find_posts
     setup_enclosing_resources
-    @posts = Post.find(:all)
+#    @posts = Post.find(:all)
+    @posts = Post.paginate :page => params[:page], :per_page => 1,  :order => 'created_at ASC'
   end
   def new_post
     setup_enclosing_resources
